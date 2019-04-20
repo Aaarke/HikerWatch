@@ -1,19 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
         tools:context=".MainActivity">
-
-    <TextView
-            android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/tbHikerWatch"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:background="@color/colorPrimaryDark"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hiker Watch"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+        />
+    </android.support.v7.widget.Toolbar>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_below="@+id/tbHikerWatch"
+    >
+
+        <RelativeLayout
+                android:id="@+id/rlLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+        >
+            <TextView
+                    android:id="@+id/tvLatitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Latitude:"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+
+            />
+            <TextView
+                    android:id="@+id/tvLatitudeVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvLatitude"
+                    tools:text="78.02"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+            />
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/rlLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+        >
+            <TextView
+                    android:id="@+id/tvLongitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Longitude:"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+
+            />
+            <TextView
+                    android:id="@+id/tvLongitudeVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvLongitude"
+                    tools:text="78.02"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+            />
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/rlAccuracy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+        >
+            <TextView
+                    android:id="@+id/tvAccuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Accuracy:"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+
+            />
+            <TextView
+                    android:id="@+id/tvAccuracyVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvAccuracy"
+                    tools:text="20.00"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+            />
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/rlAltitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+        >
+            <TextView
+                    android:id="@+id/tvAltitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Altitude:"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+
+            />
+            <TextView
+                    android:id="@+id/tvAltitudeVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvAltitude"
+                    tools:text="5.00"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+            />
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/rlAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+        >
+            <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Address:"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+
+            />
+            <TextView
+                    android:id="@+id/tvAddressVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvAddress"
+                    tools:text="26 West camerroon"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+            />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</RelativeLayout>
